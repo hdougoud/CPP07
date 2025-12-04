@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/01 16:48:28 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/12/01 16:57:57 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/12/04 14:18:09 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	swap(T &a, T &b)
 }
 
 template <typename T>
-T	min(T a, T b)
+T	min(const T a, const T b)
 {
 	if (a < b)
 		return (a);
@@ -28,7 +28,7 @@ T	min(T a, T b)
 }
 
 template <typename T>
-T	max(T a, T b)
+T	max(const T a, const T b)
 {
 	if (a > b)
 		return (a);
