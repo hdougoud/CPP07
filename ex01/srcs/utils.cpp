@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/12 12:59:40 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/12/13 13:50:42 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/12/16 15:54:21 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,9 @@ void	toUpperStr(std::string &str)
 	{
 		*it = std::toupper(*it);
 	}
+}
+
+void	multiply(int &a)
+{
+	a *= 2;
 }
