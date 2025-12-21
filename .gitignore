@@ -39,6 +39,7 @@ build
 *.app
 Template
 Iter
+Array
 
 #Random files
 *_shrubbery

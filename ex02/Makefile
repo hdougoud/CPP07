@@ -1,10 +1,10 @@
-NAME		= Iter
+NAME		= Array
 CXX			= g++
 CXXFLAGS	= -Wall -Werror -Wextra -std=c++98 -Iinclude
 
 BUILD_DIR	= build/
 SRCS_DIR	= srcs/
-SRCS_FILES	= main.cpp utils.cpp
+SRCS_FILES	= main.cpp
 OBJS		= $(addprefix $(BUILD_DIR), $(SRCS_FILES:.cpp=.o))
 
 all: $(BUILD_DIR) $(NAME)
