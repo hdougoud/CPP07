@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 16:46:26 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/12/21 21:58:29 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/12/22 10:14:04 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Array
 		Array &operator=(const Array &src);
 		~Array();
 		T &operator[](int idx);
+		T &operator[](int idx) const;
 		int size(void) const;
 
 		class outOfRangeException;

@@ -6,7 +6,7 @@
 /*   By: hdougoud <hdougoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 16:46:19 by hdougoud          #+#    #+#             */
-/*   Updated: 2025/12/21 22:00:09 by hdougoud         ###   ########.fr       */
+/*   Updated: 2025/12/22 10:14:18 by hdougoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ Array<T>	&Array<T>::operator=(const Array &src)
 {
 	if (this != &src)
 	{
+		delete[] this->_array;
 		this->_array = new T[src._size]();
 		this->_size = src._size;
 		for (int i = 0; i < this->_size; i++)
@@ -52,11 +53,19 @@ Array<T>	&Array<T>::operator=(const Array &src)
 template <typename T>
 Array<T>::~Array()
 {
-	delete[] _array;
+	delete[] this->_array;
 }
 
 template <typename T>
 T &Array<T>::operator[](int idx)
+{
+	if (idx < 0 || idx >= this->_size)
+		throw (outOfRangeException());
+	return (this->_array[idx]);
+}
+
+template <typename T>
+T &Array<T>::operator[](int idx) const
 {
 	if (idx < 0 || idx >= this->_size)
 		throw (outOfRangeException());
